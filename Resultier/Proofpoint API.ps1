@@ -8,9 +8,8 @@ $endpointuri = "https://us3.proofpointessentials.com/api/endpoint/$org"
 $endpointresults = Invoke-RestMethod -Uri $endpointuri -Headers $ProofpointHeader -Method GET
 $endpoint = $endpointresults.message.endpoints
 $Uri = "$endpoint/api/orgs/$org/users"
-$ProofpointHeader = New-Object 'System.Collections.Generic.Dictionary[[String],[String]]'
 $ProofpointHeader.Add("Content-Type","application/json")
-$users = Import-Csv "C:\AMD\test.csv" | ConvertTo-Json
+$users = Import-Csv "C:\AMD\testorg.csv" | ConvertTo-Json
 Invoke-RestMethod -uri $uri -Headers $ProofpointHeader -Method POST -Body $users -ContentType "application/json"
 $Username = ""
 $Pass = ""
