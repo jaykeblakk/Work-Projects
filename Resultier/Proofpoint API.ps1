@@ -14,3 +14,8 @@ Invoke-RestMethod -uri $uri -Headers $ProofpointHeader -Method POST -Body $users
 $Username = ""
 $Pass = ""
 $ProofpointHeader = ""
+$endpointuri = ""
+$endpoint = ""
+$Uri = ""
+$users = ""
+$endpointresults = ""
